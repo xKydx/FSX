@@ -29,18 +29,14 @@ while running:
     print colored("Depending on your search critiria,This could take a few min", "red")
     print""
     print""
-#			This part was confusing at first,
-#		Tell walk to look in dir's and files starting at /. update: user chooses what dir, / is now lookin argv
-#		look for files, dir's and sub dirs names from user input, then display them on srceen.
     for dirname, dirnames, filenames in os.walk(lookin):
         for i in glob.glob(dirname+'/'+search+'*'):
             print colored (i,"blue")
 
     print ("Enter Y to continue or N to quit")
     restart = raw_input(prompt2)
-    if 'y' in restart:#if you enter "y" program restarts
+    if 'y' in restart:
         running
     else:
         print colored("FSX terminated", "red")
         running = False
-        #if you enter anything else program closes.

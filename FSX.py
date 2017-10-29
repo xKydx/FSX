@@ -43,9 +43,4 @@ while running:
     else:
         print colored("FSX terminated", "red")
         running = False
-        #if you enter "n e thing else" program closes.
-#
-#Author:
-# Dave Reid
-
-# kydice@gmail.com
+        #if you enter anything else program closes.

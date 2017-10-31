@@ -8,7 +8,7 @@ from termcolor import colored
 
 lookin = argv
 
-prompt1 = '.:|'
+prompt = '.:|'
 
 running = True
 
@@ -18,12 +18,12 @@ while running:
     print ("Please enter your search start point. eg: / or /home/yourname")
     print("")
     print("")
-    lookin = raw_input (prompt1)
+    lookin = raw_input (prompt)
 #	User inputs starting directory location.
     print("")
     print("")
     print ("Enter file name")
-    search = raw_input(prompt1)
+    search = raw_input(prompt)
     print("")
     print("")
 #	User inputs file name.
@@ -35,7 +35,7 @@ while running:
             print colored (i,"blue")
 
     print ("Enter Y to continue or N to quit")
-    restart = raw_input(prompt2)
+    restart = raw_input(prompt)
     if 'y' in restart:
         running
     else:

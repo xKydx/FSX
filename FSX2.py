@@ -1,5 +1,6 @@
 #!/usr/bin/env python
-
+# Please install python-termcolor from repository
+# File Search Xterm Version II
 import glob
 import os
 from sys import argv

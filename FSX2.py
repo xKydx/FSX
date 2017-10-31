@@ -1,5 +1,6 @@
 #!/usr/bin/env python
-
+# Please install python-termcolor from repository
+# File Search Xterm Version II
 import glob
 import os
 from sys import argv
@@ -7,7 +8,7 @@ from termcolor import colored
 
 lookin = argv
 
-prompt1 = '.:|'
+prompt = '.:|'
 
 running = True
 
@@ -17,30 +18,26 @@ while running:
     print ("Please enter your search start point. eg: / or /home/yourname")
     print("")
     print("")
-    lookin = raw_input (prompt1)
+    lookin = raw_input (prompt)
 #	User inputs starting directory location.
     print("")
     print("")
     print ("Enter file name")
-    search = raw_input(prompt1)
+    search = raw_input(prompt)
     print("")
     print("")
 #	User inputs file name.
     print colored("Depending on your search critiria,This could take a few min", "red")
     print""
     print""
-#			This part was confusing at first,
-#		Tell walk to look in dir's and files starting at /. update: user chooses what dir, / is now lookin argv
-#		look for files, dir's and sub dirs names from user input, then display them on srceen.
     for dirname, dirnames, filenames in os.walk(lookin):
         for i in glob.glob(dirname+'/'+search+'*'):
             print colored (i,"blue")
 
     print ("Enter Y to continue or N to quit")
-    restart = raw_input(prompt2)
-    if 'y' in restart:#if you enter "y" program restarts
+    restart = raw_input(prompt)
+    if 'y' in restart:
         running
     else:
         print colored("FSX terminated", "red")
         running = False
-        #if you enter anything else program closes.

@@ -1,10 +1,9 @@
 #!/usr/bin/env python
-# Please install python-termcolor from repository
 # File Search Xterm Version II
 import glob
 import os
 from sys import argv
-from termcolor import colored
+
 
 lookin = argv
 
@@ -27,17 +26,17 @@ while running:
     print("")
     print("")
 #	User inputs file name.
-    print colored("Depending on your search critiria,This could take a few min", "red")
+    print("Depending on your search critiria,This could take a few min")
     print""
     print""
     for dirname, dirnames, filenames in os.walk(lookin):
         for i in glob.glob(dirname+'/'+search+'*'):
-            print colored (i,"blue")
+            print(i)
 
     print ("Enter Y to continue or N to quit")
     restart = raw_input(prompt)
     if 'y' in restart:
         running
     else:
-        print colored("FSX terminated", "red")
+        print("FSX terminated")
         running = False

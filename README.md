@@ -1,6 +1,7 @@
 # FSX version 2
 Search for files using this python script.
+inteded for large libraries. 
 
 ## NOTE:
-python-termcolor will be removed from this version in next repo update.
-Planed code cleanup on or before Dec 8th 2017
+python-termcolor hes been removed from this version.
+Code cleanup Dec 8th 2017

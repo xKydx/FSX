@@ -17,24 +17,24 @@ while running:
     print ("Please enter your search start point. eg: / or /home/yourname")
     print("")
     print("")
-    lookin = raw_input (prompt)
+    lookin = input (prompt)
 #	User inputs starting directory location.
     print("")
     print("")
     print ("Enter file name")
-    search = raw_input(prompt)
+    search = input(prompt)
     print("")
     print("")
 #	User inputs file name.
     print("Depending on your search critiria,This could take a few min")
-    print""
-    print""
+    print("")
+    print("")
     for dirname, dirnames, filenames in os.walk(lookin):
         for i in glob.glob(dirname+'/'+search+'*'):
             print(i)
 
     print ("Enter Y to continue or N to quit")
-    restart = raw_input(prompt)
+    restart = input(prompt)
     if 'y' in restart:
         running
     else:
